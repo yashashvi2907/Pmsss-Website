@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Scholarship</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/application.css">
+
+
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+
+        
+        <div class="header-container_1">
+            <img src="images/header/india_logo.png" alt="India Logo" class="logo">
+            <img src="images/header/digital_india.png" alt="Digital India logo" class="logo">
+        </div>
+
+        <div class="header-container">    
+            <img src="images/header/aicte_logo.png" alt="AICTE logo Logo" class="logo">
+        </div>
+
+        <div class="header-container_2">
+        
+            <button class="login-btn">
+                <img src="images/header/login.png" alt="Login Icon">Login</button>
+            
+        </div>
+
+    </header>
+
+
+<!-- Popup Overlay and Login Form -->
+<div id="loginPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Login</h2>
+            <span class="close-btn" id="closePopup">&times;</span>
+        </div>
+        <form class="popup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="collapse-btn" id="collapse-btn">☰</button>
+                <div class="profile">
+                    <h3 class="profile-text">Profile</h3>
+                    <p class="profile-text">Registered Gmail...</p>
+                </div>
+            </div>
+            <div class="sidebar-line"></div> <!-- Add this line -->
+
+
+            <ul class="sidebar-menu">
+                <li><a href="index.html">
+                    <span class="menu-icon"><img src="images/sidebar/home.png" alt="Home"></span>
+                    <span class="menu-text">Home</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/about.png" alt="About"></span>
+                    <span class="menu-text">About</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/service.png" alt="Service"></span>
+                    <span class="menu-text">Service</span></a>
+                </li>
+                <li><a href="#" class="active">
+                    <span class="menu-icon"><img src="images/sidebar/application.png" alt="Application"></span>
+                    <span class="menu-text">Application</span></a>
+                </li>
+                <li><a href="status.html">
+                    <span class="menu-icon"><img src="images/sidebar/status.png" alt="Status"></span>
+                    <span class="menu-text">Status</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-menu">
+                <div class="helpdesk">
+                    <a href="tel:18001804566" class="helpdesk-link">
+                        <img src="images/sidebar/helpdesk.png" alt="Help Desk Icon" class="helpdesk-icon">
+                        <span class="menu-text">
+                        Help Desk</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner Section -->
+
+        <!-- Main Section: Academic Details, Upload Documents, Status, Query -->
+        
+        <main class="content">
+            <section class="banner">
+            </section>
+
+            <section class="options-container"></section>
+                <!-- Academic Details Option -->
+<div class="option-box" id="academic-details">
+    <div class="option-header" onclick="toggleOption('academic-details-content')">
+        <span class="bullet-point"></span> Academic Details
+        <div class="arrow-icon">&#x25BC;</div>
+        <span class="status-text" id="academic-status">Pending</span>
+    </div>
+    <div class="option-content" id="academic-details-content">
+        <form>
+            <label for="marks10">10th Marks:</label>
+            <input type="text" id="marks10" name="marks10" placeholder="Enter 10th class percentage">
+            
+            <label for="marks12">12th Marks:</label>
+            <input type="text" id="marks12" name="marks12" placeholder="Enter 12th class percentage">
+            
+            <!--   <label for="diploma">Diploma:</label>
+            <input type="text" id="diploma" name="diploma" placeholder="Enter diploma percentage">   -->
+            
+            <label for="board">Board:</label>
+<select id="board" name="board" required>
+    <option value="" disabled selected>Select Board</option>
+    <option value="cbse">CBSE Board</option>
+    <option value="jk-bose">JK Bose</option>
+</select>
+            
+            <button type="submit">Submit</button> <!-- Added Submit Button -->
+        </form>
+    </div>
+</div>
+
+            <!-- Upload Documents Option -->
+            <!-- Upload Documents Option -->
+<div class="option-box" id="upload-documents">
+    <div class="option-header" onclick="toggleOption('upload-documents-content')">
+        <span class="bullet-point"></span> Upload Documents
+        <div class="arrow-icon">&#x25BC;</div>
+        <span class="status-text" id="upload-status">Pending</span>
+    </div>
+    <div class="option-content" id="upload-documents-content">
+        <form>
+            <div class="document-upload">
+                <!-- Aadhar Card Upload -->
+                <label>Aadhar Card:</label>
+                <div class="input-container">
+                    <input type="file" name="aadhar" id="aadhar-upload" accept="image/*" class="file-input">
+                    <label for="aadhar-upload" class="file-placeholder">Click here to upload</label>
+                    <img src="images/upload.png" alt="Upload Icon" class="input-icon">
+                </div>
+                <span class="doc-status1" id="aadhar-status">Not Uploaded</span><br>
+
+                <!-- Domicile Certificate Upload -->
+                <label>Domicile Certificate:</label>
+                <div class="input-container">
+                    <input type="file" name="domicile" id="domicile-upload" accept="image/*" class="file-input">
+                    <label for="domicile-upload" class="file-placeholder">Click here to upload</label>
+                    <img src="images/upload.png" alt="Upload Icon" class="input-icon">
+                </div>
+                <span class="doc-status2" id="domicile-status">Not Uploaded</span><br>
+
+                <!-- Marksheet Upload -->
+                <label>Marksheet:</label>
+                <div class="input-container">
+                    <input type="file" name="marksheet" id="marksheet-upload" accept="image/*" class="file-input">
+                    <label for="marksheet-upload" class="file-placeholder">Click here to upload</label>
+                    <img src="images/upload.png" alt="Upload Icon" class="input-icon">
+                </div>
+                <span class="doc-status3" id="marksheet-status">Not Uploaded</span><br>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+</main>      
+</div>
+
+    <!-- JavaScript to handle the collapsible content -->
+    <script>
+        function toggleOption(optionId) {
+            const content = document.getElementById(optionId);
+            const arrow = content.previousElementSibling.querySelector('.arrow-icon');
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+            arrow.innerHTML = arrow.innerHTML === '&#x25B6;' ? '&#x25BC;' : '&#x25B6;';
+        }
+    </script>
+<script src="js/application.js"></script>
+<script src="js/home-login.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

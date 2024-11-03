@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Scholarship</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/application.css">
+
+
+
+</head>
+<body>
+
+    
+    <!-- Header Section -->
+    <header>
+
+        
+        <div class="header-container_1">
+            <img src="images/header/india_logo.png" alt="India Logo" class="logo">
+            <img src="images/header/digital_india.png" alt="Digital India logo" class="logo">
+        </div>
+
+        <div class="header-container">    
+            <img src="images/header/aicte_logo.png" alt="AICTE logo Logo" class="logo">
+        </div>
+
+        <div class="header-container_2">
+        
+            <button class="login-btn">
+                <img src="images/header/login.png" alt="Login Icon">Login</button>
+            
+        </div>
+
+    </header>
+
+
+<!-- Popup Overlay and Login Form -->
+<div id="loginPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Login</h2>
+            <span class="close-btn" id="closePopup">&times;</span>
+        </div>
+        <form class="popup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="collapse-btn" id="collapse-btn">☰</button>
+                <div class="profile">
+                    <h3 class="profile-text">Profile</h3>
+                    <p class="profile-text">Registered Gmail...</p>
+                </div>
+            </div>
+            <div class="sidebar-line"></div> <!-- Add this line -->
+
+
+            <ul class="sidebar-menu">
+                <li><a href="index.html">
+                    <span class="menu-icon"><img src="images/sidebar/home.png" alt="Home"></span>
+                    <span class="menu-text">Home</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/about.png" alt="About"></span>
+                    <span class="menu-text">About</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/service.png" alt="Service"></span>
+                    <span class="menu-text">Service</span></a>
+                </li>
+                <li><a href="application.html">
+                    <span class="menu-icon"><img src="images/sidebar/application.png" alt="Application"></span>
+                    <span class="menu-text">Application</span></a>
+                </li>
+                <li><a href="#" class="active">
+                    <span class="menu-icon"><img src="images/sidebar/status.png" alt="Status"></span>
+                    <span class="menu-text">Status</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-menu">
+                <div class="helpdesk">
+                    <a href="tel:18001804566" class="helpdesk-link">
+                        <img src="images/sidebar/helpdesk.png" alt="Help Desk Icon" class="helpdesk-icon">
+                        <span class="menu-text">
+                        Help Desk</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner Section -->
+     
+
+        <!-- Main Section: Academic Details, Upload Documents, Status, Query -->
+        
+        <main class="content">
+            <section class="banner">
+            </section>
+            <section class="options-container"></section>
+
+            
+        <!--- Status, Query -->
+
+
+                <!-- Status Option -->
+                <div class="option-box" id="status">
+                    <div class="option-header" onclick="toggleOption('status-content')">
+                        <span class="bullet-point"></span> Status
+                        <div class="arrow-icon">&#x25BC;</div>
+                        <span class="status-text" id="status-status">Pending</span>
+                    </div>
+                    <div class="option-content" id="status-content">
+                        <!-- Status details will go here -->
+                        <div class="option-content" id="academic-details-content">
+                            <form>
+                                <div class="form-body">
+                                    <!-- Status line and steps -->
+                                    <div class="status-line-container">
+                                        <div class="status-step completed">Successfully Registered</div>
+                                        <div class="status-step">Uploaded Documents</div>
+                                        <div class="status-step">Documents Verified</div>
+                                        <div class="status-step">Details Forwarded</div>
+                                        <div class="status-step">Funds Transferred</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query Option -->
+                <div class="option-box" id="query">
+                    <div class="option-header" onclick="toggleOption('query-content')">
+                        <span class="bullet-point"></span> Query
+                        <div class="arrow-icon">&#x25BC;</div>
+                        <span class="status-text" id="query-status">Pending</span>
+                    </div>
+                    <div class="option-content" id="query-content">
+                        <!-- Query details will go here -->
+                        <div class="option-content" id="academic-details-content">
+                            <form>
+                                <label for="mark10">Check your Query Status here:</label><br>
+                                <input type="text" id="mark10" name="mark10" placeholder="No query raised. We'll notify through email as well." readonly>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        
+    </div>
+
+    <!-- JavaScript to handle the collapsible content -->
+    <script>
+        function toggleOption(optionId) {
+            const content = document.getElementById(optionId);
+            const arrow = content.previousElementSibling.querySelector('.arrow-icon');
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+            arrow.innerHTML = arrow.innerHTML === '&#x25B6;' ? '&#x25BC;' : '&#x25B6;';
+        }
+    </script>
+    
+<script src="js/application.js"></script>
+<script src="js/home-login.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="css/form-styles.css">
+        <link rel="stylesheet" href="css/popup.css">
+    </head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container_1">
+            <img src="images/header/india_logo.png" alt="India Logo" class="logo">
+            <img src="images/header/digital_india.png" alt="Digital India logo" class="logo">
+        </div>
+
+        <div class="header-container">    
+            <img src="images/header/aicte_logo.png" alt="AICTE logo Logo" class="logo">
+        </div>
+
+        <div class="header-container_2">
+            <a href="https://www.youtube.com/" class="login-link">  
+            <button class="login-btn">
+                <img src="images/header/login.png" alt="Login Icon">Login</button>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="collapse-btn" id="collapse-btn">☰</button>
+                <div class="profile">
+                    <h3 class="profile-text">Profile</h3>
+                    <p class="profile-text">Registered Gmail...</p>
+                </div>
+            </div>
+            <div class="sidebar-line"></div> <!-- Add this line -->
+
+
+            <ul class="sidebar-menu">
+                <li><a href="index.html">
+                    <span class="menu-icon"><img src="images/sidebar/home.png" alt="Home"></span>
+                    <span class="menu-text">Home</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/about.png" alt="About"></span>
+                    <span class="menu-text">About</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/service.png" alt="Service"></span>
+                    <span class="menu-text">Service</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/application.png" alt="Application"></span>
+                    <span class="menu-text">Application</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/status.png" alt="Status"></span>
+                    <span class="menu-text">Status</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-menu">
+                <div class="helpdesk">
+                    <a href="#">
+                        <img src="images/sidebar/helpdesk.png" alt="Help Desk Icon" class="helpdesk-icon">
+                        <span class="menu-text">
+                        Help Desk</span></a>
+                </div>
+            </div>
+        </nav>
+        
+      
+<main class="content">
+            <section class="banner">
+           
+            </section>
+            
+
+            <!-- Popup Backdrop -->
+<div id="popupBackdrop"></div>
+
+<!-- Popup Window -->
+<div id="loginPopup">
+    <div class="popup-header">
+        <h2>Login</h2>
+        <button id="closePopup" class="closePopup">&times;</button>
+    </div>
+    <div class="popup-content">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+        <button type="submit">Login</button>
+    </div>
+</div>
+</main>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/home-login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Scholarship</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+
+        
+        <div class="header-container_1">
+            <img src="images/header/india_logo.png" alt="India Logo" class="logo">
+            <img src="images/header/digital_india.png" alt="Digital India logo" class="logo">
+        </div>
+
+        <div class="header-container">    
+            <img src="images/header/aicte_logo.png" alt="AICTE logo Logo" class="logo">
+        </div>
+
+        <div class="header-container_2">
+        
+            <button class="login-btn">
+                <img src="images/header/login.png" alt="Login Icon">Login</button>
+            
+        </div>
+
+    </header>
+
+
+<!-- Popup Overlay and Login Form -->
+<div id="loginPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Login</h2>
+            <span class="close-btn" id="closePopup">&times;</span>
+        </div>
+        <form class="popup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="collapse-btn" id="collapse-btn">☰</button>
+                <div class="profile">
+                    <h3 class="profile-text">Profile</h3>
+                    <p class="profile-text">Registered Gmail...</p>
+                </div>
+            </div>
+            <div class="sidebar-line"></div> <!-- Add this line -->
+
+
+            <ul class="sidebar-menu">
+                <li><a href="index.html" class="active">
+                    <span class="menu-icon"><img src="images/sidebar/home.png" alt="Home"></span>
+                    <span class="menu-text">Home</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/about.png" alt="About"></span>
+                    <span class="menu-text">About</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/service.png" alt="Service"></span>
+                    <span class="menu-text">Service</span></a>
+                </li>
+                <li><a href="application.html">
+                    <span class="menu-icon"><img src="images/sidebar/application.png" alt="Application"></span>
+                    <span class="menu-text">Application</span></a>
+                </li>
+                <li><a href="status.html">
+                    <span class="menu-icon"><img src="images/sidebar/status.png" alt="Status"></span>
+                    <span class="menu-text">Status</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-menu">
+                <div class="helpdesk">
+                    <a href="tel:18001804566" class="helpdesk-link">
+                        <img src="images/sidebar/helpdesk.png" alt="Help Desk Icon" class="helpdesk-icon">
+                        <span class="menu-text">
+                        Help Desk</span></a>
+                </div>
+            </div>
+        </nav>
+        
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <section class="banner">
+            </section>
+
+            <div class="header-container_3">
+                <a href="registration.html">
+                    <div class="button-with-icon">
+                        <button class="login-btn_2">
+                            <img src="images/caution.png" alt="Icon" class="register-icon">
+                            <b>REGISTER NOW</b>
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <section class="actions">
+                <div class="action-item">
+                    <h2>Apply For<br>Scholarship</h2>
+                    <img src="images/apply.png" alt="Apply for Scholarship">
+                </div>
+                <div class="action-item">
+                    <h2>Check your<br>Status</h2>
+                    <img src="images/status.png" alt="Check Status">
+                </div>
+                <div class="action-item">
+                    <h2>More<br>Information</h2>
+                    <img src="images/info.png" alt="More Information">
+                </div>
+            </section>
+        </main>
+    </div>
+<script src="js/home-login.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>

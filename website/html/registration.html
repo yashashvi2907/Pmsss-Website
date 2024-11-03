@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/form-styles.css">
+        <link rel="stylesheet" href="css/popup.css">
+    </head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container_1">
+            <img src="images/header/india_logo.png" alt="India Logo" class="logo">
+            <img src="images/header/digital_india.png" alt="Digital India logo" class="logo">
+        </div>
+
+        <div class="header-container">    
+            <img src="images/header/aicte_logo.png" alt="AICTE logo Logo" class="logo">
+        </div>
+
+        <div class="header-container_2"> 
+
+            <button class="login-btn">
+                <img src="images/header/login.png" alt="Login Icon">Login</button>
+            
+        </div>
+
+    </header>
+
+    <!-- Popup Overlay and Login Form -->
+<div id="loginPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Login</h2>
+            <span class="close-btn" id="closePopup">&times;</span>
+        </div>
+        <form class="popup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="collapse-btn" id="collapse-btn">☰</button>
+                <div class="profile">
+                    <h3 class="profile-text">Profile</h3>
+                    <p class="profile-text">Registered Gmail...</p>
+                </div>
+            </div>
+            <div class="sidebar-line"></div> <!-- Add this line -->
+
+
+            <ul class="sidebar-menu">
+                <li><a href="index.html">
+                    <span class="menu-icon"><img src="images/sidebar/home.png" alt="Home"></span>
+                    <span class="menu-text">Home</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/about.png" alt="About"></span>
+                    <span class="menu-text">About</span></a>
+                </li>
+                <li><a href="#">
+                    <span class="menu-icon"><img src="images/sidebar/service.png" alt="Service"></span>
+                    <span class="menu-text">Service</span></a>
+                </li>
+                <li><a href="application.html">
+                    <span class="menu-icon"><img src="images/sidebar/application.png" alt="Application"></span>
+                    <span class="menu-text">Application</span></a>
+                </li>
+                <li><a href="status.html">
+                    <span class="menu-icon"><img src="images/sidebar/status.png" alt="Status"></span>
+                    <span class="menu-text">Status</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-menu">
+                <div class="helpdesk">
+                    <a href="#">
+                        <img src="images/sidebar/helpdesk.png" alt="Help Desk Icon" class="helpdesk-icon">
+                        <span class="menu-text">
+                        Help Desk</span></a>
+                </div>
+            </div>
+        </nav>
+        
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <section class="banner">
+                <!--
+                <h1>PMSSS Scholarship</h1>
+                <p>Scholarship Scheme, Eligibility, How to Apply</p>
+                <button class="watch-btn">Watch Now</button>
+            -->
+            </section>
+            
+
+
+        <!--    registration button
+
+            <div class="header-container_3">
+                
+                    <div class="button-with-icon">
+                        <button class="login-btn_2">
+                            <img src="images/caution.png" alt="Icon" class="register-icon">
+                            <b>REGISTER NOW</b>
+                        </button>
+                    </div>
+                
+            </div>
+
+            -->
+
+            <div class="registration-content">
+                <div class="registration-form">
+                    <h2>Registration Portal</h2>
+                    <form id="registrationForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name here (Required)">
+                        
+                        <label for="phone">Phone No:</label>
+                        <input type="text" id="phone" name="phone" required placeholder="Enter your Phone no. here (Required)">
+                        <button type="button" id="getOTP" onclick="sendOTP()">Get Verified</button>
+                        <input type="text" id="otp" name="otp" placeholder="Enter OTP Here" style="display:none;">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your Email here (Required)">
+        
+                        <label for="password">Create Password:</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your Password here (Required)" minlength="8">
+        
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your Password (Required)">
+                        <small id="passwordError" style="color:red; display:none;">Password should be the same</small>
+
+                        <button type="submit" id="submitBtn">Submit Now</button><br>
+                        <small>After clicking on Submit button, you'll be redirected to the login window</small>
+                        
+                    </form>
+                </div>
+            </div>
+        
+
+
+
+        </main>
+    
+    </div>
+
+    <script src="js/home-login.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form-script.js"></script>
+
+</body>
+</html>
