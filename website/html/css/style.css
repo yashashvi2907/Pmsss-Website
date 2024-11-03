@@ -1,0 +1,494 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+/* Full-width Header */
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid black; /* Adds a black line at the bottom */
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-container_1 {
+    display: flex;
+    align-items: left;
+    width: 100%;
+}
+
+.header-container_2 {
+    margin: auto;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-container_3 {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 286px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container_3:hover {
+    background-color: #45a049; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.logo {
+    height: 60px;
+}
+
+.login-btn {
+    display: inline-flex;      /* Use flexbox layout */
+    align-items: center;      /* Vertically centers items */
+    justify-content: center;  /* Horizontally centers items */
+    font-size: 22px;          /* Font size */
+    padding: 7px 15px;        /* Button padding */
+    background-color: #4caf50; /* Background color */
+    color: rgb(0, 0, 0);      /* Text color */
+    border: none;             /* Remove border */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;          /* Pointer cursor on hover */
+    line-height: 1;           /* Ensure line-height does not affect alignment */
+    text-align: center;       /* Center text alignment */
+}
+
+/*
+.login-btn_1 {
+    display: inline-flex;      
+    align-items: center;      
+    justify-content: center;  
+    font-size: 30px;         
+    padding: 20px 40px;        
+    background-color: #09470a;
+    color: rgb(255, 255, 255);      
+    border: none;             
+    border-radius: 5px;       
+    cursor: pointer;          
+    line-height: 1;           
+    text-align: center;       
+}*/
+
+
+
+.button-with-icon {
+    position: relative; /* Relative positioning for the icon to stick out */
+    display: inline-block;
+    text-align: center;
+}
+
+.login-btn_2 {
+    padding: 15px 45px;
+    background-color: #09470a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative; /* Ensures the image is positioned relative to the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* Allows the image to stick out of the button */
+}
+
+
+@keyframes ring {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.sidebar-line {
+    height: 3px; /* Adjust thickness as needed */
+    background-color: #333; /* Line color */
+    width: 400%; /* Ensures the line spans the full width of the sidebar */
+    margin: -23px 10px 30px -20px; /* Spacing above and below the line */
+}
+
+
+.register-icon {
+    width: 60px; /* Adjust size */
+    height: 60px;
+    position: absolute;
+    top: -20px; /* This moves the image up above the button */
+    left: 87%;
+    transform: translateX(-50%); /* Centers the image horizontally on the button */
+    animation: ring 1s infinite; /* Apply ring animation */
+}
+
+
+
+.login-btn img {
+    width: 25px;              /* Size of the image */
+    height: 25px;             /* Size of the image */
+    margin-right: 6px;
+    vertical-align: middle;         /* Space between image and text */
+}
+
+/* Main Container for Sidebar and Content */
+.main-container {
+    display: flex;
+    height: calc(100vh - 100px); /* Full height minus header height */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #248241;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: 0.3s ease;
+    overflow: hidden;
+    border-top-right-radius: 25px; /* Rounded corner at the top-right */
+    border-bottom-right-radius: 25px; /* Rounded corner at the bottom-right */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.shrink {
+    width: 70px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapse-btn {
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.profile {
+    margin-top: -43px;
+}
+
+.profile-text {
+    margin: 0px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.shrink .profile-text {
+    opacity: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure the link takes full width for proper alignment */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.sidebar ul li a:hover {
+
+    color: white;
+    transform: scale(1.2) translateX(12px);/* Zoom effect */
+}
+
+.sidebar.shrink ul li a:hover {
+    color: white;
+    transform: scale(1.2)translateX(12px); /* Maintain zoom effect in shrunk state */
+}
+
+/* Adjust the positioning of menu items */
+.sidebar ul {
+    margin-bottom: auto; /* Pushes the items up */
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; /* Adjust spacing between items */
+}
+
+.menu-icon img {
+    width: 27px;
+    height: auto;
+    vertical-align: center;
+}
+
+.sidebar.shrink .menu-icon img {
+    width: 27px;
+}
+
+/* Ensure the text stays hidden but the icons remain visible when sidebar shrinks */
+.sidebar.shrink .menu-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a .menu-icon {
+    margin-right: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-icon img {
+        width: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon img {
+        width: 18px;
+    }
+}
+
+.menu-text {
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.shrink .menu-text {
+    opacity: 0;
+}
+
+.helpdesk {
+    margin-top: auto; /* Pushes the help desk button to the bottom of the sidebar */
+}
+
+.helpdesk a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    justify-content: center; /* Vertically center text and image */
+    border-radius: 11px;
+    width: 100%; /* Ensure it spans the full width of the sidebar */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: opacity 0.3s ease; /* Smooth transition for text visibility */
+}
+
+.helpdesk-icon {
+    width: 25px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+
+
+.sidebar.shrink .helpdesk a {
+    justify-content: center; /* Center content in shrunk state */
+    padding: 10px 15px; /* Adjust padding if needed */
+}
+
+.sidebar.shrink .helpdesk .helpdesk-icon {
+    width: 25px; /* Adjust size as needed */
+    margin-right: 0; /* Remove margin when text is hidden */
+}
+
+.sidebar.shrink .helpdesk a {
+    opacity: 1; /* Keep image visible when sidebar is shrunk */
+}
+
+.sidebar.shrink .helpdesk a .menu-text {
+    display: none; /* Hide text when sidebar is shrunk */
+}
+
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf8e5;
+    overflow-y: auto;
+}
+
+/* Banner 
+.banner {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}  */
+
+.banner {
+    background-image: url('images/bannerpic6.png'); /* Your image path */
+    background-size: 128%;  /* Adjust as needed */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1px;           /* Increase padding if needed */
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    height: 230px;           /* Set a specific height for better control */
+}
+
+/* Action Section */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px; /* Space between boxes */
+}
+
+.action-item {
+    background-color: white;
+    text-align: center;
+    padding: 20px; /* Increased padding for more space inside */
+    border-radius: 10px;
+    width: 35%; /* Adjust width */
+    height: 250px; /* Fixed height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    margin-left: 27px; /* Adds spacing around the box */
+    margin-right: 20px;
+    margin-top: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.action-item img {
+    width: 180px;
+    height: 180px;
+}
+
+.action-item h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.action-item:hover {
+    transform: scale(1.05); /* Slightly scale up the box */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    position: relative;
+    width: 100%; /* Ensure it takes up the full width of the sidebar */
+}
+
+/* Active Menu Item */
+.sidebar-menu .active {
+    position: relative;
+    background: linear-gradient(to right, #ffffffc9 0%, #f0f0f000 100%);
+    padding: 4px 30px; /* Increase padding for height */
+    z-index: 1; /* Ensure it’s on top */
+    margin: 0px -20px; /* Add margin if needed to separate from other items */
+    height: auto; /* Ensure the height adjusts based on padding */
+    
+}
+
+/* Optional: To ensure the gradient takes full width */
+.sidebar-menu .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ffffff 0%, #f0f0f000 100%);
+    z-index: -1; /* Place behind text */
+    border-radius: 5px;
+}
+
+/* Text and Icon Styles for Active Menu Item */
+.sidebar-menu .active .menu-text {
+    color: #093718; /* Change text color */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-menu .active .menu-icon img {
+    filter: none; /* Default filter */
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* Change image color when menu item is active */
+.sidebar-menu .active .menu-icon img {
+    filter: invert(100%) sepia(64%) saturate(2600%) hue-rotate(166deg) brightness(94%) contrast(90%);
+}

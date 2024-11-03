@@ -1,0 +1,139 @@
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0px); /* Start with no blur */
+    background-color: rgba(0, 0, 0, 0); /* Start with transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: overlayBlur 0.4s forwards, overlayFadeIn 0.3s forwards; /* Add animations */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #e0fad2;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.8); /* Shadow around the popup */
+    max-width: 400px;
+    width: 100%;
+    position: relative; /* Ensure the close button positions correctly relative to this container */
+    transform: scale(0.8); /* Start scaled down */
+    opacity: 0; /* Start with no opacity */
+    animation: slideIn 0.4s forwards, fadeIn 0.3s forwards; /* Add animations */
+}
+
+/* Popup Header */
+.popup-header {
+    display: flex;
+    justify-content: center; /* Center the entire header content */
+    position: relative; /* To position the close button */
+    margin-bottom: 10px;
+}
+
+.popup-header h2 {
+    text-align: center; /* Center align the heading text */
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -35px; /* Adjust position as needed */
+    right: -66px; /* Adjust position as needed */
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: #981c1c; /* Background color */
+    border-radius: 50%; /* Circular background */
+    width: 2.5rem; /* Fixed width for circular shape */
+    height: 2.5rem; /* Fixed height for circular shape */
+    display: flex; /* Center the icon */
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    padding: 0; /* Remove padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+    color: white; /* Ensure the icon is visible */
+    text-align: center; /* Center the icon text */
+}
+
+/* Popup Form */
+.popup-form label {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.popup-form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.popup-form button {
+    width: auto; /* Remove full width */
+    padding: 7px 30px;
+    background-color:#12803e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Center the button */
+    display: block; /* Ensure it is displayed as a block element */
+}
+
+.popup-form button:hover {
+    background-color: #1d5f32;
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%) scale(0.8); /* Start from below and scaled down */
+        opacity: 0; /* Start with no opacity */
+    }
+    100% {
+        transform: translateY(0) scale(1); /* End at original position and size */
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+@keyframes overlayBlur {
+    0% {
+        backdrop-filter: blur(0px); /* Start with no blur */
+    }
+    100% {
+        backdrop-filter: blur(7px); /* End with the desired blur effect */
+    }
+}
+
+@keyframes overlayFadeIn {
+    0% {
+        background-color: rgba(0, 0, 0, 0); /* Start with transparent background */
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.1); /* End with slightly darkened background */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with no opacity */
+    }
+    100% {
+        opacity: 1; /* End with full opacity */
+    }
+}

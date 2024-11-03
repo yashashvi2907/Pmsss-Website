@@ -1,0 +1,366 @@
+/* Option header styles */
+.option-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #093718;
+    color: #fff;
+    font-size: 17px;
+    width: 85%;
+    border-radius: 13px;
+    margin: 0 auto 15px auto;
+}
+
+.option-header:hover {
+    background-color: #125e2a;
+}
+
+.bullet-point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f4a261;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.arrow-icon {
+    font-size: 20px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.option-header.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.status-text {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #e76f51;
+    font-weight: bold;
+}
+
+/* Enhanced Form Fields and Buttons Inside Shrinkable Forms */
+.option-content form {
+    width: 65%;
+    margin: 0 auto;
+    background-color: #d4edc5;
+    padding-left: 90px;
+    padding-right: 220px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border-top: none; /* Remove the top border */
+    border-right: 1px solid #000; /* Right border */
+    border-bottom: 1px solid #000; /* Bottom border */
+    border-left: 1px solid #000; /* Left border */
+    box-shadow:
+        4px 0 8px rgba(55, 55, 55, 0.4),
+        0 4px 8px rgba(54, 54, 54, 0.4),
+        -4px 0 8px rgba(54, 54, 54, 0.4);
+}
+
+/* Form labels */
+.option-content form label {
+   
+    display: block;
+    margin-bottom: 1px;
+    color: #000000;
+}
+
+/* Form input fields */
+.option-content form input[type="text"], 
+.option-content form input[type="file"] {
+    width: calc(100% - 16px);
+    height: 30px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Input fields on focus */
+.option-content form input[type="text"]:focus, 
+.option-content form input[type="file"]:focus {
+    border-color: #093718;
+    outline: none;
+}
+
+/* Form buttons */
+.option-content form button {
+    background-color: #093718;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.option-content form button:hover {
+    background-color: #125e2a;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .option-header {
+        font-size: 16px;
+    }
+
+    .bullet-point {
+        width: 15px;
+        height: 15px;
+    }
+
+    .arrow-icon {
+        font-size: 18px;
+    }
+
+    .option-content form {
+        width: 95%;
+    }
+}
+
+/* Document upload section */
+.document-upload {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+/* Upload field container */
+.upload-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Document upload labels */
+.upload-field label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1;
+    color: #333;
+}
+
+/* File input in document upload section */
+.upload-field input[type="file"] {
+    flex: 2;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Upload button */
+.upload-btn {
+    background-color: #093718;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.upload-btn:hover {
+    background-color: #125e2a;
+}
+
+
+
+.doc-status1 {
+    position: absolute;
+    right: 00;
+    top: 10%;
+    transform: translateX(150%);
+    font-size: 14px;
+    color: #264653;
+    background-color: #e9ecef;
+    padding: 6px 10px;
+    border-radius: 4px;
+    
+}
+
+
+.doc-status2 {
+    position: absolute;
+    right: 00;
+    top: 44%;
+    transform: translateX(150%);
+    font-size: 14px;
+    color: #264653;
+    background-color: #e9ecef;
+    padding: 6px 10px;
+    border-radius: 4px;
+    
+}
+
+.doc-status3 {
+    position: absolute;
+    right: 00;
+    top: 77%;
+    transform: translateX(150%);
+    font-size: 14px;
+    color: #264653;
+    background-color: #e9ecef;
+    padding: 6px 10px;
+    border-radius: 4px;
+    
+}
+
+
+/* Status for uploaded documents */
+.doc-status.uploaded {
+    background-color: #2a9d8f;
+    color: #fff;
+}
+
+/* Container for input and icon */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for input field */
+.input-container input[type="file"] {
+    width: 100%;
+    padding-right: 40px; /* Space for image */
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+/* Style for image inside input container */
+.input-container .input-icon {
+    position: absolute;
+    right: 20px;
+    top: 48%; /* Align image vertically */
+    transform: translateY(-50%); /* Center the image vertically */
+    width: 20px;
+    height: 20px;
+}
+
+/* Hide the actual file input */
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style for placeholder text */
+.file-placeholder {
+    flex: 1;
+    height: 30px; /* Set a specific height */
+    padding: 6px;
+    font-size: 16px;
+    color: #999;
+    border: 1.5px solid #000;
+    border-radius: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #ffff;
+}
+/* Container for the status line */
+
+.status-line-container {
+    display: flex;
+    width:122%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Horizontal line */
+.status-line-container::before {
+    content: '';
+    position: absolute;
+    top: 28%; /* Adjusted for center alignment */
+    left: 50%; /* Center alignment */
+    transform: translateX(-50%); /* Center alignment */
+    height: 3px;
+    background-color: #000;
+    z-index: 1;
+    width: 94%;
+}
+
+/* Each step (circle) */
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    font-size: 14px;
+    color: #000;
+    margin-left: -45px;
+    margin-right: -45px; /* Adjust the margin for equal spacing */
+    text-align: center; /* Center-align the text */
+    
+}
+
+
+.status-step::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.status-step.completed::before {
+    background-color: green;
+    border-color: green;
+    border: 3px solid #000;
+    color: white;
+}
+                                   
+/* Increase height of specific input field */
+#mark10 {
+    height: 50px; /* Adjust height as needed */
+    padding: 10px; /* Add padding if needed for better spacing */
+    box-sizing: border-box; /* Ensures padding is included in the height */
+    font-weight: bold;
+}
+
+/* Style for select element in the form */
+.option-content form select {
+    width: calc(100% - 16px);
+    height: 30px;
+    padding: 0px 5px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Select element on focus */
+.option-content form select:focus {
+    border-color: #093718;
+    outline: none;
+}
